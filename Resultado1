@@ -23,3 +23,21 @@ for i in range(n):
     arreglo.append(num)
 
 print("Arreglo generado:", arreglo)
+
+encontrado = False
+for num in arreglo:
+    if num % 3 == 0:
+        minimo = num
+        maximo = num
+        encontrado = True
+        break
+
+if encontrado:
+    minimo, maximo = buscar_min_max(arreglo, 0, minimo, maximo)
+    promedio = (minimo + maximo) / 2
+
+    print("Mínimo múltiplo de 3:", minimo)
+    print("Máximo múltiplo de 3:", maximo)
+    print("Promedio:", promedio)
+else:
+    print("No hay múltiplos de 3 en el arreglo")
