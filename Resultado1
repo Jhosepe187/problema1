@@ -16,5 +16,10 @@ def buscar_min_max(arreglo, i, minimo, maximo):
     return buscar_min_max(arreglo, i + 1, minimo, maximo)
 
 n = int(input("Ingrese el tamaño del arreglo: "))
-
 arreglo = []
+
+for i in range(n):
+    num = random.randint(10, 9999)
+    arreglo.append(num)
+
+print("Arreglo generado:", arreglo)
