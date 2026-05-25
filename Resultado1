@@ -14,3 +14,7 @@ def buscar_min_max(arreglo, i, minimo, maximo):
             maximo = arreglo[i]
 
     return buscar_min_max(arreglo, i + 1, minimo, maximo)
+
+n = int(input("Ingrese el tamaño del arreglo: "))
+
+arreglo = []
