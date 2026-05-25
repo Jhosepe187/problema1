@@ -1,6 +1,16 @@
 import random
 
 def buscar_min_max(arreglo, i, minimo, maximo):
-    # caso base: cuando llega al final del arreglo
     if i == len(arreglo):
         return minimo, maximo
+    
+    if i == len(arreglo):
+        return minimo, maximo
+
+    if arreglo[i] % 3 == 0:
+        if arreglo[i] < minimo:
+            minimo = arreglo[i]
+        if arreglo[i] > maximo:
+            maximo = arreglo[i]
+
+    return buscar_min_max(arreglo, i + 1, minimo, maximo)
